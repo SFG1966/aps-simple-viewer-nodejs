@@ -14,12 +14,31 @@
 <body>
     <div id="header">
         <img class="logo" src="https://cdn.autodesk.io/logo/black/stacked.png" alt="Autodesk Platform Services">
-        <span class="title">Simple Viewer</span>
+        <span class="title">Scaffolding Tilting Monitor</span>
         <select name="models" id="models"></select>
         <button id="upload" title="Upload New Model">Upload</button>
+        <button id="change_color" title="Start Simulation">Start Simulation</button>
         <input style="display: none" type="file" id="input">
     </div>
-    <div id="preview"></div>
+    <div id="main-content">
+        <div id="preview"></div>
+        <div id="drawer">
+            <h3>Alert Log</h3>
+            <table id="simulation-log-table">
+                <thead>
+                    <tr>
+                        <th>Importance</th>
+                        <th>Tilt</th>
+                        <th>Item Mark</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Log items will be inserted here by JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
     <div id="overlay"></div>
     <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.js"></script>
     <script src="/main.js" type="module"></script>
